@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping cart</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <i id="headerColor" class="fa-solid fa-palette"></i>
+
+      <div class="logo">
+
+        <h2>SAF COMMERCE</h2>
+        <div class="imageAddBox">
+          <i id="imageAddBoxColor" class="fa-solid fa-palette"></i>
+    
+              <form action="">
+              <input id="ProductTitle" type="text" placeholder="Title of the Product" />
+              <input id="ProductDescription" type="text" placeholder="Description of the Product" />
+              <input id="ProductPrice" type="text" placeholder="Price of the Product" />
+              <input type="file" id="fileInput" accept="image/*" />
+    </form>
+              <img src="" alt="" id="imagePreview" style="width: 200px; height:200px" alt=""  />
+              <button id="btnAddImage">Add to Card</button>
+            </div>
+      </div>
+      <ul>
+      <i id="ulColor" class="fa-solid fa-palette"></i>
+
+        <li>Home</li>
+        <li>Pages</li>
+        <li>Shop</li>
+        <li>Blog</li>
+      </ul>
+      <ul>
+        <div id="cartNumber">0</div>
+        <li>
+          <i  class="fa-solid fa-magnifying-glass" style="color: #000"></i>
+        </li>
+        <li><i class="fa-regular fa-heart" style=" color: #000"></i></li>
+        <li id="cartShopping">
+          <i class="fa-solid fa-cart-shopping" style="color: #000"></i>
+        </li>
+      </ul>
+
+      <div class="cartDisplay">
+      <i id="cartDisplayColor" class="fa-solid fa-palette"></i>
+
+        <div class="cartDisplay-totalprice">
+          <p id="totalPrice"></p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+
+    <section id="cardSection">
+
+     
+      <!-- <div class="card">
+        <i id="cardColor" style="z-index: 2; color: black ; margin-left: 220px; margin-top: 20px;" class="fa-solid fa-palette"></i>
+
+        <div class="image">
+          
+          <img src="img/jacket.png" alt="" />
+        </div>
+
+        <div class="description">
+          <h2>Black Leather Jacket</h2>
+          <p>Stylish and durable</p>
+        </div>
+        <div class="price">
+          <h3>30$</h3>
+        </div>
+        <button id="addtoCartBtn">Add to card</button>
+      </div> -->
+
+      <!-- <div class="card">
+          <div class="image">
+            <img src="img/headphone.png" alt="" />
+          </div>
+
+          <div class="description">
+            <h2>Silver Headphones</h2>
+            <p>High-quality sound</p>
+          </div>
+          <div class="price">
+            <h3>60$</h3>
+          </div>
+          <button id="addtoCartBtn">Add to card</button>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="img/watch.png" alt="" />
+          </div>
+
+          <div class="description">
+            <h2>Gold Watch</h2>
+            <p>Elegant and classic</p>
+          </div>
+          <div class="price">
+            <h3>180$</h3>
+          </div>
+          <button id="addtoCartBtn">Add to card</button>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="img/watch3.png" alt="" />
+          </div>
+
+          <div class="description">
+            <h2>Moto G Play 2023</h2>
+            <p>Moto G Play 3-Day Battery</p>
+          </div>
+          <div class="price">
+            <h3>240$</h3>
+          </div>
+          <button id="addtoCartBtn">Add to card</button>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="img/watch2.png" alt="" />
+          </div>
+
+          <div class="description">
+            <h2> Digital Sports Watch</h2>
+            <p>Water-resistant design</p>
+          </div>
+          <div class="price">
+            <h3>100$</h3>
+          </div>
+          <button id="addtoCartBtn">Add to card</button>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="img/jacket.png" alt="" />
+          </div>
+
+          <div class="description">
+            <h2>Black Leather Jacket</h2>
+            <p>Fashionable outerwear</p>
+          </div>
+          <div class="price">
+            <h3>80$</h3>
+          </div>
+          <button id="addtoCartBtn">Add to card</button>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="img/watch4.png" alt="" />
+          </div>
+
+          <div class="description">
+            <h2>Kids Pink Watch</h2>
+            <p>Cute and functional</p>
+          </div>
+          <div class="price">
+            <h3>70$</h3>
+          </div>
+          <button id="addtoCartBtn">Add to card</button>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="img/headphone2.png " alt="" />
+          </div>
+
+          <div class="description">
+            <h2>Silver Headphones</h2>
+            <p>Noise-cancelling feature</p>
+          </div>
+          <div class="price">
+            <h3>90$</h3>
+          </div>
+          <button id="addtoCartBtn">Add to card</button>
+        </div> -->
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
