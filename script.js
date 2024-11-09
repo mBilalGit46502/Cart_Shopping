@@ -33,7 +33,11 @@
   });
   //  imagePreview=document.getElementById("imagePreview")
  
-  btnAddImage.addEventListener("click", function () {
+
+
+
+
+  function cardGenerate() {
     // Creating the card structure
     let card = document.createElement("div");
     card.className = "card";
@@ -44,7 +48,7 @@
     cardColor.addEventListener("click",function(){
 
       let randColor4 = "#" + Math.floor(Math.random() * 16777215).toString(16);
-      let randColor5="#"+Math.floor(Math.random() * 16778225).toString(16);
+      let randColor5="#"+Math.floor(Math.random() * 16777225).toString(16);
       for(i=0;i<randColor4.length;i++){
     
        
@@ -99,16 +103,16 @@
       h3.innerHTML = `$${ProductPrice.value}`;
       img.src=imagePreview.src
       
-    }else{
+    }
+    else{
   alert("plz enter the all input value ")
 
 
 }
     
-imagePreview=document.getElementById("imagePreview")
-  imagePreview.src=""
-  imagePreview.style.visibility = "hidden";
+
     
+
 
 
     let cartShopping = document.getElementById("cartShopping");
@@ -138,9 +142,7 @@ cartShopping.addEventListener("click", function (e) {
   e.stopPropagation();
 });
 
-ProductTitle.value=""
-ProductDescription.value=""
-ProductPrice.value=""
+
 
 document.addEventListener("click", function (e) {
   let cartDisplay = document.querySelector(".cartDisplay");
@@ -171,7 +173,7 @@ document.addEventListener("click", function (e) {
       let cartDisplayColor=document.getElementById("cartDisplayColor")
       cartDisplayColor.addEventListener("click",function(){
 
-        console.log("bilal");
+        // console.log("bilal");
         
 let cartDisplay=document.querySelector(".cartDisplay")
 let randColor6 = "#" + Math.floor(Math.random() * 16777215).toString(16);
@@ -252,9 +254,43 @@ for(i=0;i<randColor6.length;i++){
 
     });
     
-  });
+  };
   
-// });
+
+  let howManyCardsInput=document.getElementById("howManyCardsInput")
+  Number(howManyCardsInput);
+function btnImageBtn(){
+
+
+if(howManyCardsInput.value<1){
+  // cardGenerate()
+  alert("plz Enter greater than 0")
+
+}else{
+
+  for(let i=0;i<howManyCardsInput.value;i++){
+    console.log("bilal");
+    
+   
+        cardGenerate()
+  
+    
+    }
+}
+
+
+
+
+
+ProductTitle.value=""
+ ProductDescription.value="";
+ProductPrice.value="";
+imagePreview.src=""
+imagePreview.style.visibility="hidden"
+howManyCardsInput.value=""
+}
+
+
 
 let addImageCheck = 0;
 let imageAddBox = document.querySelector(".imageAddBox");
@@ -280,7 +316,7 @@ imageAddBox.addEventListener("click", function(event) {
       btnAddImage.style.display="block"
 let imageAddBoxColor=document.getElementById("imageAddBoxColor")
 imageAddBoxColor.style.display="block"
-
+howManyCardsInput.style.display="block"
       addImageCheck = 1;
     } else {
       imageAddBox.style.animation="reduceWidth 2s normal"
@@ -298,6 +334,7 @@ imageAddBoxColor.style.display="block"
       btnAddImage.style.display="none"
       let imageAddBoxColor=document.getElementById("imageAddBoxColor")
 imageAddBoxColor.style.display="none"
+howManyCardsInput.style.display="none"
       addImageCheck = 0;
     }
   }

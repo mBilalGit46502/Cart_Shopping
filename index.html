@@ -26,10 +26,12 @@
               <input id="ProductTitle" type="text" placeholder="Title of the Product" />
               <input id="ProductDescription" type="text" placeholder="Description of the Product" />
               <input id="ProductPrice" type="text" placeholder="Price of the Product" />
+              <input id="howManyCardsInput" type="text" placeholder="how many cards you want to generate ?">
               <input type="file" id="fileInput" accept="image/*" />
+
     </form>
               <img src="" alt="" id="imagePreview" style="width: 200px; height:200px" alt=""  />
-              <button id="btnAddImage">Add to Card</button>
+              <button onclick="btnImageBtn()" id="btnAddImage">Add to Card</button>
             </div>
       </div>
       <ul>
@@ -192,6 +194,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

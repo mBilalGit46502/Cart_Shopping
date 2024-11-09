@@ -200,6 +200,7 @@ font-size: 20px;
 
 
 
+
 form,input{
   display: flex;
   flex-direction: column;
@@ -234,6 +235,12 @@ background-color: #31a9cc;
 
 }
 
+#howManyCardsInput{
+  width: 100%;
+  color: black;
+  padding: 10px 20px;
+  display: none;
+}
  #ProductTitle{
   width: 100%;
   padding: 10px 20px;
